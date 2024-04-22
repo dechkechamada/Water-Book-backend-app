@@ -1,15 +1,23 @@
-# Water-BookFrontendApp
 
-Angular version 17.1.2.
 
-Styling is done using the latest verion of Angular Material Library
-Library used for Forms: Angular Reactive Forms
-Library used for Table: Angular Material Table
-Library used for Chart: Ag Chart
+## Description
 
-Before running the UI App, we need to start the backend app to serve the APIs ( Refer to backend App [README.md](https://github.com/dechkechamada/Water-Book-backend-app/blob/master/README.md))
+Serves the APIs for the Water Book App
 
-T## Installation
+Framework used: NestJS (Express server)
+Database: MongoDB (Hosted on AWS cloud in MongoDB Atlas)
+
+API Endpoints: 
+GET: http://localhost:3000/water-service/readings
+GET with timestamp filter: http://localhost:3000/water-service/readings?$filter=timestamp lte 2024-04-21T05:03:38.229Z
+POST: http://localhost:3000/water-service/readings 
+        POST Payload: 
+        {
+            "pressure":1,
+            "flow": 1.3
+        }
+
+## Installation
 
 ```bash
 $ npm install
